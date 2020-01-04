@@ -35,7 +35,7 @@ publishDir = "docs"
     [languages.en.params.logo]
       logoText = "[cmihai@server ~/cmihai-ansible] $"
       #logoText = "Ansible in the Cloud"
-      logoHomeLink = "/cmihai-ansible/blog/"
+      logoHomeLink = "/blog/"
 
       [[languages.en.menu.main]]
         identifier = "My Blog"
