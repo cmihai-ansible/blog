@@ -176,6 +176,17 @@ pip3 install --upgrade \
 <h2 id="installing-roles-from-ansible-galaxy">Installing roles from ansible galaxy</h2>
 
 <pre><code class="language-bash">ansible-galaxy install crivetimihai.apache
+ansible-galaxy install crivetimihai.haproxy
+</code></pre>
+
+<p>Creating an inventory file</p>
+
+<pre><code class="language-ini">[loadbalancers]
+192.168.0.1
+
+[webservers]
+192.168.0.101
+192.168.0.102
 </code></pre>
 
 <h2 id="using-a-role">Using a role</h2>
@@ -183,9 +194,9 @@ pip3 install --upgrade \
 <p>Create a file called apache.yml</p>
 
 <pre><code class="language-yaml">---
-- name: Install apache on localhost
+- name: Install apache on webservers
   hosts:
-    - localhost
+    - webservers
   connection: local
 
   tasks:
@@ -205,6 +216,44 @@ pip3 install --upgrade \
 <p>Install the role on your server:</p>
 
 <pre><code class="language-bash">ansible-playbook apache.yml
+</code></pre>
+
+<h3 id="setting-up-haproxy">Setting up HAProxy:</h3>
+
+<p>Create a file called haproxy.yml</p>
+
+<pre><code class="language-yaml">---
+- name: Install haproxy on localhost
+  hosts:
+    - loadbalancers
+  connection: local
+
+  tasks:
+    - name: haproxy is configured
+      import_role:
+        name: crivetimihai.haproxy
+      vars:
+        # defaults file for haproxy
+
+        # Service
+        haproxy_enable_service: true
+        haproxy_copy_templates: true
+        haproxy_firewall_configure: true
+        haproxy_firewall_rules:
+          - service: http
+
+        # Frontend
+        haproxy_frontend_port: 80
+
+        # Backend
+        haproxy_backend_name: app
+        haproxy_backend_port: 80
+        haproxy_backend_servers:
+          - name: web01
+            address: 192.168.101
+          - name: web02
+            address: 192.168.0.102
+      tags: haproxy
 </code></pre>
 
   </div>
