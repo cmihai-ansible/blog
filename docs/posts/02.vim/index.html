@@ -9,28 +9,28 @@
 <meta name="description" content=" Set up your vimrc: &amp;quot; Load local vimrc from project directory (set this in your main vimrc) &amp;quot; set exrc autocmd FileType yml,yaml setlocal ts=2 sts=2 sw=2 expandtab et ai cuc colorscheme torte &amp;quot; Color column 80 highlight ColorColumn ctermbg=6 guibg=lightblue set colorcolumn=80 &amp;quot; General set cuc # Set cursorcolumn set exrc &amp;quot; Load vimrc from project directory set number &amp;quot; Show line numbers set numberwidth=4 set showmatch &amp;quot; Highlight matching brace set visualbell &amp;quot; Use visual bell (no beeping) set hlsearch &amp;quot; Highlight all search results set smartcase &amp;quot; Enable smart-case search set ignorecase &amp;quot; Always case-insensitive set incsearch &amp;quot; Searches for strings incrementally set autoindent &amp;quot; Auto-indent new lines set expandtab &amp;quot; Use spaces instead of tabs set shiftwidth=2 &amp;quot; Number of auto-indent spaces set smartindent &amp;quot; Enable smart-indent set smarttab &amp;quot; Enable smart-tabs set softtabstop=2 &amp;quot; Number of spaces per Tab &amp;quot;&amp;quot; Advanced set ruler &amp;quot; Show row and column ruler information set undolevels=1000 &amp;quot; Number of undo levels set backspace=indent,eol,start &amp;quot; Backspace behaviour set nowrap  "/>
 <meta name="keywords" content="redhat csc cloud"/>
 <meta name="robots" content="noodp"/>
-<link rel="canonical" href="https://github.com/cmihai-ansible/blog/posts/02.vim/" />
+<link rel="canonical" href="https://cmihai-ansible.github.io/blog/posts/02.vim/" />
 
 
-<link rel="stylesheet" href="https://github.com/cmihai-ansible/blog/assets/style.css">
+<link rel="stylesheet" href="https://cmihai-ansible.github.io/blog/assets/style.css">
 
-  <link rel="stylesheet" href="https://github.com/cmihai-ansible/blog/assets/red.css">
-
-
-
-<link rel="stylesheet" href="https://github.com/cmihai-ansible/blog/style.css">
+  <link rel="stylesheet" href="https://cmihai-ansible.github.io/blog/assets/red.css">
 
 
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://github.com/cmihai-ansible/blog/img/apple-touch-icon-144-precomposed.png">
 
-<link rel="shortcut icon" href="https://github.com/cmihai-ansible/blog/favicon.ico">
+<link rel="stylesheet" href="https://cmihai-ansible.github.io/blog/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://cmihai-ansible.github.io/blog/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="https://cmihai-ansible.github.io/blog/favicon.ico">
 
 
 
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Editing yaml with vim :: [cmihai@server ~/cmihai-ansible] $ — Mihai&#39;s Blog" />
 <meta name="twitter:description" content=" Set up your vimrc: &amp;quot; Load local vimrc from project directory (set this in your main vimrc) &amp;quot; set exrc autocmd FileType yml,yaml setlocal ts=2 sts=2 sw=2 expandtab et ai cuc colorscheme torte &amp;quot; Color column 80 highlight ColorColumn ctermbg=6 guibg=lightblue set colorcolumn=80 &amp;quot; General set cuc # Set cursorcolumn set exrc &amp;quot; Load vimrc from project directory set number &amp;quot; Show line numbers set numberwidth=4 set showmatch &amp;quot; Highlight matching brace set visualbell &amp;quot; Use visual bell (no beeping) set hlsearch &amp;quot; Highlight all search results set smartcase &amp;quot; Enable smart-case search set ignorecase &amp;quot; Always case-insensitive set incsearch &amp;quot; Searches for strings incrementally set autoindent &amp;quot; Auto-indent new lines set expandtab &amp;quot; Use spaces instead of tabs set shiftwidth=2 &amp;quot; Number of auto-indent spaces set smartindent &amp;quot; Enable smart-indent set smarttab &amp;quot; Enable smart-tabs set softtabstop=2 &amp;quot; Number of spaces per Tab &amp;quot;&amp;quot; Advanced set ruler &amp;quot; Show row and column ruler information set undolevels=1000 &amp;quot; Number of undo levels set backspace=indent,eol,start &amp;quot; Backspace behaviour set nowrap  " />
-<meta name="twitter:site" content="https://github.com/cmihai-ansible/blog" />
+<meta name="twitter:site" content="https://cmihai-ansible.github.io/blog/" />
 <meta name="twitter:creator" content="cmihai" />
 <meta name="twitter:image" content="">
 
@@ -39,7 +39,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Editing yaml with vim :: [cmihai@server ~/cmihai-ansible] $ — Mihai&#39;s Blog">
 <meta property="og:description" content=" Set up your vimrc: &amp;quot; Load local vimrc from project directory (set this in your main vimrc) &amp;quot; set exrc autocmd FileType yml,yaml setlocal ts=2 sts=2 sw=2 expandtab et ai cuc colorscheme torte &amp;quot; Color column 80 highlight ColorColumn ctermbg=6 guibg=lightblue set colorcolumn=80 &amp;quot; General set cuc # Set cursorcolumn set exrc &amp;quot; Load vimrc from project directory set number &amp;quot; Show line numbers set numberwidth=4 set showmatch &amp;quot; Highlight matching brace set visualbell &amp;quot; Use visual bell (no beeping) set hlsearch &amp;quot; Highlight all search results set smartcase &amp;quot; Enable smart-case search set ignorecase &amp;quot; Always case-insensitive set incsearch &amp;quot; Searches for strings incrementally set autoindent &amp;quot; Auto-indent new lines set expandtab &amp;quot; Use spaces instead of tabs set shiftwidth=2 &amp;quot; Number of auto-indent spaces set smartindent &amp;quot; Enable smart-indent set smarttab &amp;quot; Enable smart-tabs set softtabstop=2 &amp;quot; Number of spaces per Tab &amp;quot;&amp;quot; Advanced set ruler &amp;quot; Show row and column ruler information set undolevels=1000 &amp;quot; Number of undo levels set backspace=indent,eol,start &amp;quot; Backspace behaviour set nowrap  " />
-<meta property="og:url" content="https://github.com/cmihai-ansible/blog/posts/02.vim/" />
+<meta property="og:url" content="https://cmihai-ansible.github.io/blog/posts/02.vim/" />
 <meta property="og:site_name" content="Editing yaml with vim" />
 <meta property="og:image" content="">
 <meta property="og:image:width" content="2048">
@@ -81,7 +81,7 @@
     
       
         
-          <li><a href="/cmihai-ansible/blog/about">About</a></li>
+          <li><a href="/blog/about">About</a></li>
         
       
         
@@ -97,7 +97,7 @@
   <ul class="menu__inner menu__inner--mobile">
     
       
-        <li><a href="/cmihai-ansible/blog/about">About</a></li>
+        <li><a href="/blog/about">About</a></li>
       
     
       
@@ -116,7 +116,7 @@
     
 <div class="post">
   <h1 class="post-title">
-    <a href="https://github.com/cmihai-ansible/blog/posts/02.vim/">Editing yaml with vim</a></h1>
+    <a href="https://cmihai-ansible.github.io/blog/posts/02.vim/">Editing yaml with vim</a></h1>
   <div class="post-meta">
       
     <span class="post-date">
@@ -133,7 +133,7 @@
   
   <span class="post-tags">
     
-    #<a href="https://github.com/cmihai-ansible/blog/tags/vim/">vim</a>&nbsp;
+    #<a href="https://cmihai-ansible.github.io/blog/tags/vim/">vim</a>&nbsp;
     
   </span>
   
@@ -193,7 +193,7 @@ set nowrap
     <div class="pagination__buttons">
       
       <span class="button previous">
-        <a href="https://github.com/cmihai-ansible/blog/posts/03.cookiecutter/">
+        <a href="https://cmihai-ansible.github.io/blog/posts/03.cookiecutter/">
           <span class="button__icon">←</span>
           <span class="button__text">Get started quickly with cookiecutter templates</span>
         </a>
@@ -201,7 +201,7 @@ set nowrap
       
       
       <span class="button next">
-        <a href="https://github.com/cmihai-ansible/blog/posts/01.installing/">
+        <a href="https://cmihai-ansible.github.io/blog/posts/01.installing/">
           <span class="button__text">Installing ansible</span>
           <span class="button__icon">→</span>
         </a>
@@ -228,8 +228,8 @@ set nowrap
   </div>
 </footer>
 
-<script src="https://github.com/cmihai-ansible/blog/assets/main.js"></script>
-<script src="https://github.com/cmihai-ansible/blog/assets/prism.js"></script>
+<script src="https://cmihai-ansible.github.io/blog/assets/main.js"></script>
+<script src="https://cmihai-ansible.github.io/blog/assets/prism.js"></script>
 
 
 

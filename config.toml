@@ -1,4 +1,4 @@
-baseurl = "https://github.com/cmihai-ansible/blog"
+baseurl = "https://cmihai-ansible.github.io/blog/"
 languageCode = "en-us"
 theme = "terminal"
 paginate = 25
