@@ -6,8 +6,8 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="description" content=" Getting started with Ansible Setup a virtual env for python python3 -m venv ~/ansible-molecule source ~/ansible molecule/bin/activate pip3 install --upgrade pip   Note: when not using a venv, use the --user flag with pip.
- Install ansible # Install ansible pip3 install --upgrade ansible # Install lint tools pip3 install --upgrade ansible-lint yamllint # Install test tools pip3 install --upgrade \ &amp;quot;molecule[docker]&amp;quot; &amp;quot;molecule[podman]&amp;quot; \ python-vagrant molecule-libvirt  Set up VIM for editing yaml files autocmd FileType yml,yaml setlocal ts=2 sts=2 sw=2 expandtab et ai cuc colorscheme torte &amp;quot; Color column 80 highlight ColorColumn ctermbg=6 guibg=lightblue set colorcolumn=80  "/>
+<meta name="description" content="Setup a virtual env for python python3 -m venv ~/ansible-molecule source ~/ansible molecule/bin/activate pip3 install --upgrade pip   Note: when not using a venv, use the --user flag with pip.
+ Install ansible # Install ansible pip3 install --upgrade ansible # Install lint tools pip3 install --upgrade ansible-lint yamllint # Install test tools pip3 install --upgrade \ &amp;quot;molecule[docker]&amp;quot; &amp;quot;molecule[podman]&amp;quot; \ python-vagrant molecule-libvirt  Installing roles from ansible galaxy ansible-galaxy install crivetimihai."/>
 <meta name="keywords" content="redhat csc cloud"/>
 <meta name="robots" content="noodp"/>
 <link rel="canonical" href="https://cmihai-ansible.github.io/blog/posts/01.installing/" />
@@ -30,8 +30,8 @@
 
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Installing ansible :: [cmihai@server ~/cmihai-ansible] $ — Mihai&#39;s Blog" />
-<meta name="twitter:description" content=" Getting started with Ansible Setup a virtual env for python python3 -m venv ~/ansible-molecule source ~/ansible molecule/bin/activate pip3 install --upgrade pip   Note: when not using a venv, use the --user flag with pip.
- Install ansible # Install ansible pip3 install --upgrade ansible # Install lint tools pip3 install --upgrade ansible-lint yamllint # Install test tools pip3 install --upgrade \ &amp;quot;molecule[docker]&amp;quot; &amp;quot;molecule[podman]&amp;quot; \ python-vagrant molecule-libvirt  Set up VIM for editing yaml files autocmd FileType yml,yaml setlocal ts=2 sts=2 sw=2 expandtab et ai cuc colorscheme torte &amp;quot; Color column 80 highlight ColorColumn ctermbg=6 guibg=lightblue set colorcolumn=80  " />
+<meta name="twitter:description" content="Setup a virtual env for python python3 -m venv ~/ansible-molecule source ~/ansible molecule/bin/activate pip3 install --upgrade pip   Note: when not using a venv, use the --user flag with pip.
+ Install ansible # Install ansible pip3 install --upgrade ansible # Install lint tools pip3 install --upgrade ansible-lint yamllint # Install test tools pip3 install --upgrade \ &amp;quot;molecule[docker]&amp;quot; &amp;quot;molecule[podman]&amp;quot; \ python-vagrant molecule-libvirt  Installing roles from ansible galaxy ansible-galaxy install crivetimihai." />
 <meta name="twitter:site" content="https://cmihai-ansible.github.io/blog/" />
 <meta name="twitter:creator" content="cmihai" />
 <meta name="twitter:image" content="https://cmihai-ansible.github.io/blog/img/ansible.png">
@@ -40,8 +40,8 @@
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Installing ansible :: [cmihai@server ~/cmihai-ansible] $ — Mihai&#39;s Blog">
-<meta property="og:description" content=" Getting started with Ansible Setup a virtual env for python python3 -m venv ~/ansible-molecule source ~/ansible molecule/bin/activate pip3 install --upgrade pip   Note: when not using a venv, use the --user flag with pip.
- Install ansible # Install ansible pip3 install --upgrade ansible # Install lint tools pip3 install --upgrade ansible-lint yamllint # Install test tools pip3 install --upgrade \ &amp;quot;molecule[docker]&amp;quot; &amp;quot;molecule[podman]&amp;quot; \ python-vagrant molecule-libvirt  Set up VIM for editing yaml files autocmd FileType yml,yaml setlocal ts=2 sts=2 sw=2 expandtab et ai cuc colorscheme torte &amp;quot; Color column 80 highlight ColorColumn ctermbg=6 guibg=lightblue set colorcolumn=80  " />
+<meta property="og:description" content="Setup a virtual env for python python3 -m venv ~/ansible-molecule source ~/ansible molecule/bin/activate pip3 install --upgrade pip   Note: when not using a venv, use the --user flag with pip.
+ Install ansible # Install ansible pip3 install --upgrade ansible # Install lint tools pip3 install --upgrade ansible-lint yamllint # Install test tools pip3 install --upgrade \ &amp;quot;molecule[docker]&amp;quot; &amp;quot;molecule[podman]&amp;quot; \ python-vagrant molecule-libvirt  Installing roles from ansible galaxy ansible-galaxy install crivetimihai." />
 <meta property="og:url" content="https://cmihai-ansible.github.io/blog/posts/01.installing/" />
 <meta property="og:site_name" content="Installing ansible" />
 <meta property="og:image" content="https://cmihai-ansible.github.io/blog/img/ansible.png">
@@ -148,9 +148,7 @@
   <div class="post-content">
     
 
-<h2 id="getting-started-with-ansible">Getting started with Ansible</h2>
-
-<h3 id="setup-a-virtual-env-for-python">Setup a virtual env for python</h3>
+<h2 id="setup-a-virtual-env-for-python">Setup a virtual env for python</h2>
 
 <pre><code class="language-bash">python3 -m venv ~/ansible-molecule
 source ~/ansible molecule/bin/activate
@@ -161,7 +159,7 @@ pip3 install --upgrade pip
 <p>Note: when not using a venv, use the <code>--user</code> flag with pip.</p>
 </blockquote>
 
-<h3 id="install-ansible">Install ansible</h3>
+<h2 id="install-ansible">Install ansible</h2>
 
 <pre><code class="language-bash"># Install ansible
 pip3 install --upgrade ansible
@@ -175,14 +173,38 @@ pip3 install --upgrade \
   python-vagrant molecule-libvirt
 </code></pre>
 
-<h3 id="set-up-vim-for-editing-yaml-files">Set up VIM for editing yaml files</h3>
+<h2 id="installing-roles-from-ansible-galaxy">Installing roles from ansible galaxy</h2>
 
-<pre><code class="language-vimrc">autocmd FileType yml,yaml setlocal ts=2 sts=2 sw=2 expandtab et ai cuc
-colorscheme torte
+<pre><code class="language-bash">ansible-galaxy install crivetimihai.apache
+</code></pre>
 
-&quot; Color column 80
-highlight ColorColumn ctermbg=6 guibg=lightblue
-set colorcolumn=80
+<h2 id="using-a-role">Using a role</h2>
+
+<p>Create a file called apache.yml</p>
+
+<pre><code class="language-yaml">---
+- name: Install apache on localhost
+  hosts:
+    - localhost
+  connection: local
+
+  tasks:
+    - name: apache is configured
+      import_role:
+        name: crivetimihai.apache
+      vars:
+        apache_enable_service: true
+        apache_copy_templates: true
+        apache_firewall_configure: true
+        apache_firewall_rules:
+          - service: http
+          - service: https
+      tags: apache
+</code></pre>
+
+<p>Install the role on your server:</p>
+
+<pre><code class="language-bash">ansible-playbook apache.yml
 </code></pre>
 
   </div>
